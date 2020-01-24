@@ -47,8 +47,8 @@ snapshot:
   name_template: SNAPSHOT-{{ .Commit }}
 checksum:
   name_template: '{{ .ProjectName }}_{{ .Version }}_checksums.txt'
-dist: dist
-sign:
+signs:
+-
   cmd: gpg
   args:
   - --output
