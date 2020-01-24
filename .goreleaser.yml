@@ -7,15 +7,19 @@ before:
     - go mod tidy
     # you may remove this if you don't need go generate
     - go generate ./...
-brew:
-  commit_author:
-    name: Tom Chavakis
-    email: tomchavakis@gmail.com
-
+brews:
+ -
+  name: go-release-playground
+  ids:
+  - go-release-playground
+  goarm: 6
   github:
     owner: tomchavakis
     name: go-release-playground
-
+  url_template: "https://github.com/tomchavakis/go-release-playground/releases/{{ .Tag }}/{{ .ArtifactName }}"
+  commit_author:
+      name: tomchavakis
+      email: tomchavakis@gmail.com
   folder: Formula
   homepage: "https://github.com/tomchavakis/go-release-playground"
   description: "Command line demo"
