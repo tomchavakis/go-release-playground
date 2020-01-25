@@ -17,7 +17,7 @@ builds:
   - "386"
   goarm:
   - "6"
-  main: .
+  main: ./main.go
   ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
   binary: go-release-playground
 archives:
@@ -41,7 +41,7 @@ signs:
   - --detach-sig
   - $artifact
   signature: ${artifact}.sig
-  artifacts: none
+  artifacts: all
 changelog:
   sort: asc
   filters:
