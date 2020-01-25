@@ -7,27 +7,11 @@ before:
     - go mod tidy
     # you may remove this if you don't need go generate
     - go generate ./...
-brews:
- -
-  name: go-release-playground
-  ids:
-  - go-release-playground
-  goarm: 6
-  github:
-    owner: tomchavakis
-    name: go-release-playground
-  url_template: "https://github.com/tomchavakis/go-release-playground/releases/{{ .Tag }}/{{ .ArtifactName }}"
-  commit_author:
-      name: tomchavakis
-      email: tomchavakis@gmail.com
-  folder: Formula
-  homepage: "https://github.com/tomchavakis/go-release-playground"
-  description: "Command line demo"
-  install: bin.install "go-release-playground"
 builds:
 - goos:
   - linux
   - darwin
+  - windows
   goarch:
   - amd64
   - "386"
@@ -37,7 +21,8 @@ builds:
   ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
   binary: go-release-playground
 archives:
-- replacements:
+- name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}'
+  replacements:
     darwin: Darwin
     linux: Linux
     windows: Windows
@@ -63,3 +48,12 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
+brews:
+ -
+  github:
+    owner: tomchavakis
+    name: go-release-playground
+  description: "Command line demo"
+  homepage: "https://github.com/tomchavakis/go-release-playground"
+  test: |
+    system "#{bin/go-release-playground}"
