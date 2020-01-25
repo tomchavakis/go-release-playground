@@ -1,5 +1,5 @@
 package main
 
 func main() {
-	println("go release application")
+	println("Go Release Test")
 }
