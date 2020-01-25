@@ -41,7 +41,7 @@ signs:
   - --detach-sig
   - $artifact
   signature: ${artifact}.sig
-  artifacts: all
+  artifacts: none
 changelog:
   sort: asc
   filters:
