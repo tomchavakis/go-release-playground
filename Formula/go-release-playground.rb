@@ -2,16 +2,16 @@
 class GoReleasePlayground < Formula
   desc "Command line demo"
   homepage "https://github.com/tomchavakis/go-release-playground"
-  version "1.0.6"
+  version "0.1.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/tomchavakis/go-release-playground/releases/download/v1.0.6/go-release-playground_Darwin_x86_64.tar.gz"
-    sha256 "70c8178d16a21bb3e3c2eedd8f0c76fbbb3d88ddfb8eee840109fef8447be277"
+    url "https://github.com/tomchavakis/go-release-playground/releases/download/v0.1.7/go-release-playground_Darwin_x86_64.tar.gz"
+    sha256 "d9c6c7b3ba5a7163ed5a6fe9da04b0780dfc76a2a028ee980c619a35632daf31"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/tomchavakis/go-release-playground/releases/download/v1.0.6/go-release-playground_Linux_x86_64.tar.gz"
-      sha256 "4ef0ea675db710d38cca131ca90fe1ca5a1f1c34afa2fb4f57572d5df2a99c5f"
+      url "https://github.com/tomchavakis/go-release-playground/releases/download/v0.1.7/go-release-playground_Linux_x86_64.tar.gz"
+      sha256 "f0d96d99e62ff08d13d09efbc78718c0185413c7f0a3677aede3e0c12e317b03"
     end
   end
 
