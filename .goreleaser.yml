@@ -55,5 +55,7 @@ brews:
     name: go-release-playground
   description: "Command line demo"
   homepage: "https://github.com/tomchavakis/go-release-playground"
+  folder: Formula
+  install: bin.install "go-release-playground"
   test: |
     system "#{bin/go-release-playground}"
