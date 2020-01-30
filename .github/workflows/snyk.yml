@@ -1,4 +1,4 @@
-name: security check
+name: snyk_check
 on: push
 jobs:
   security:

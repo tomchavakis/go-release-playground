@@ -1,4 +1,4 @@
-![security check](https://github.com/tomchavakis/go-release-playground/workflows/security%20check/badge.svg)
+![security check](https://github.com/tomchavakis/go-release-playground/workflows/snyk_check/badge.svg?event=push)
 
 # go-release-playground
 
