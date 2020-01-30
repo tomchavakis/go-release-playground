@@ -1,3 +1,5 @@
+![security check](https://github.com/tomchavakis/go-release-playground/workflows/security%20check/badge.svg)
+
 # go-release-playground
 
 A Playground Project to work with goreleaser.
