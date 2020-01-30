@@ -1,3 +1,5 @@
+![security](https://github.com/tomchavakis/go-release-playground/workflows/snyk_check/badge.svg?branch=master&event=push)
+
 # go-release-playground
 
 A Playground Project to work with goreleaser.
